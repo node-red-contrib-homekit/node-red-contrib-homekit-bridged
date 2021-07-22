@@ -201,9 +201,11 @@ module.exports = function (RED: NodeAPI) {
                     }
 
                     class CustomCharacteristic extends Characteristic {
+                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                         static readonly UUID: string = UUID!
 
                         constructor() {
+                            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                             super(name!, CustomCharacteristic.UUID, {
                                 ...validatedProps,
                                 perms: validatedProps.perms ?? [
